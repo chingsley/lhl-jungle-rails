@@ -16,8 +16,8 @@
       </thead>
       <tbody>
         <% enhanced_cart.each do |item| %>
-          <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
-        <% end %>
+          <%= render 'item' , product: item[:product], quantity: item[:quantity].to_i %>
+            <% end %>
       </tbody>
       <tfoot>
         <tr>
@@ -25,7 +25,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
@@ -35,17 +35,12 @@
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-amount="<%= cart_subtotal_cents %>"
-          data-name="Jungle"
-          data-description="Khurram Virani's Jungle Order"
-          data-locale="auto"
-          data-email="kvirani@gmail.com"
-          data-currency="cad">
-        </script>
-      <% end %>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-amount="<%= cart_subtotal_cents %>"
+          data-name="Jungle" data-description="Khurram Virani's Jungle Order" data-locale="auto"
+          data-email="kvirani@gmail.com" data-currency="cad">
+          </script>
+        <% end %>
     </div>
   </div>
 
