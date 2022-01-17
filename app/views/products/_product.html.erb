@@ -2,13 +2,14 @@
   <header>
     <%# this and the line below are comments, to uncomment, replace the '#' with '=' %>
       <%# raise product.inspect %>
+        <%# debug product (this prints in browser a stringified value of each product) %>
 
-        <%= link_to product do %>
-          <%= image_tag product.image.thumb, alt: product.name %>
-            <h4>
-              <%= product.name %>
-            </h4>
-            <% end %>
+          <%= link_to product do %>
+            <%= image_tag product.image.thumb, alt: product.name %>
+              <h4>
+                <%= product.name %>
+              </h4>
+              <% end %>
   </header>
   <p class="description">
     <%= product.description %>
