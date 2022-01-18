@@ -1,2 +1,24 @@
-<h1>Admin::Dashboard#show</h1>
+<!-- <h1>Admin::Dashboard#show</h1>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
+ -->
+
+<section class="admin-products-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; Dashboard - Counts</h1>
+  </header>
+  <div class="well">
+    <%= link_to '+ New Product' , [:new, :admin, :product], class: 'btn btn-info' %>
+  </div>
+
+  <div class="well">
+    <ul class="nav nav-pills" role="tablist">
+      <li role="presentation" class="active"><a href="admin/products">Products <span class="badge">
+            <%= @prodcucts_count %>
+          </span></a></li>
+      <li role="presentation" class="active"><a href="#">Categories <span class="badge">
+            <%= @categories_count %>
+          </span></a></li>
+    </ul>
+  </div>
+</section>
