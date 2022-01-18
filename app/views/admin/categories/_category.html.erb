@@ -1,0 +1,17 @@
+<tr>
+  <td>
+    <h4>
+      <%= category.name %>
+    </h4>
+  </td>
+  <td>
+    <h4>
+      <%= time_ago_in_words(category.created_at) %> ago
+    </h4>
+  </td>
+  <td>
+    <h4>
+      <%= category.products.length() %>
+    </h4>
+  </td>
+</tr>
