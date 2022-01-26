@@ -60,7 +60,6 @@ ActiveRecord::Schema.define(version: 20220125140918) do
     t.string   "name"
     t.date     "starts_on"
     t.date     "ends_on"
-    t.string   "status"
     t.decimal  "percent_off"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
