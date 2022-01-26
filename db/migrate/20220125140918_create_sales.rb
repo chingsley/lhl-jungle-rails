@@ -4,7 +4,6 @@ class CreateSales < ActiveRecord::Migration
       t.string :name
       t.date :starts_on
       t.date :ends_on
-      t.string :status
       t.decimal :percent_off
 
       t.timestamps null: false
