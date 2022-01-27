@@ -29,6 +29,17 @@ cat1 = Category.find_or_create_by! name: 'Apparel'
 cat2 = Category.find_or_create_by! name: 'Electronics'
 cat3 = Category.find_or_create_by! name: 'Furniture'
 
+
+## CATEGORIES
+
+puts "Re-creating Sales ..."
+
+Sale.destroy_all
+
+sale1 = Sale.create!({name: 'March Sales', starts_on: 10.days.from_now, ends_on: 20.days.from_now, percent_off: 15}) 
+sale2 = Sale.create!({name: 'New Year Sales', starts_on: 10.days.ago, ends_on: 10.days.from_now, percent_off: 35}) 
+sale3 = Sale.create!({name: 'X-Mas Sales', starts_on: 40.days.ago, ends_on: 10.days.ago, percent_off: 45}) 
+
 ## PRODUCTS
 
 puts "Re-creating Products ..."
