@@ -3,6 +3,17 @@ class SessionsController < ApplicationController
   end
 
   def create
+    email = session_params[:email]
+    password = session_params[:password]
+    if user = User.authenticate_with_credentials(email, password)
+      session[:user_id] = user.id
+      redirect_to '/'
+    else
+      redirect_to '/login'
+    end
+  end
+
+  def create__depricated
     user = User.find_by_email(session_params[:email])
 
     # If the user exists AND the password entered is correct.
