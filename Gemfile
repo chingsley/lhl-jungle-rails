@@ -55,6 +55,12 @@ group :development do
   gem 'spring', '~> 3.0'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+end
+
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
