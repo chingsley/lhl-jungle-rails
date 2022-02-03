@@ -46,6 +46,7 @@
           <% end %>
         </li>
         <% if current_user %>
+          <%#= raise current_user.inspect %>
           <li>
             <%= link_to 'Logout' , [:logout] %>
           </li>

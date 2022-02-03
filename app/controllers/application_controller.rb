@@ -34,6 +34,8 @@ class ApplicationController < ActionController::Base
     unless @current_user
       session[:user_id] = nil
     end
+    # pp ">>>>>>>>", @current_user, session[:user_id], "<<<<<<<<<<"
+    @current_user
   end
   helper_method :current_user
 
