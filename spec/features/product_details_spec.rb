@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "ProductDetails", type: :feature, js: true do
+RSpec.feature "ProductDetails;  Visitor clicks product on home page which navigates to product detail page", type: :feature, js: true do
     # SETUP
     before :each do
       @category = Category.create! name: 'Apparel'
@@ -26,6 +26,6 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
 
       # To DEBUG USE ONE OF THE BELOW
       # save_screenshot
-      puts page.html
+      # puts page.html
     end
 end

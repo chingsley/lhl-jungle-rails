@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
   def self.authenticate_with_credentials(email, password)
     trimed_email = email.gsub(/\s+/, '')
-    user = self.find_by_email(trimed_email)
+    user = self.find_by_email(trimed_email) # self.find_by_email(email.downcase.strip)
     if user && user.authenticate(password)
       return user
     else
