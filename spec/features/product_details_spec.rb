@@ -26,6 +26,6 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
 
       # To DEBUG USE ONE OF THE BELOW
       # save_screenshot
-      puts page.html
+      # puts page.html
     end
 end
