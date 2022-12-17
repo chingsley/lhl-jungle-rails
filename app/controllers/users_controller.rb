@@ -12,7 +12,8 @@ class UsersController < ApplicationController
       redirect_to '/'
     else
       puts user.errors.full_messages
-      redirect_to '/signup'
+      # redirect_to '/signup' # this does not send the error to the form
+      render :new # this sends any errors to the form for display
     end
   end
 
